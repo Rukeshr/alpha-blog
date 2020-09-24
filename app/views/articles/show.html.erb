@@ -6,6 +6,7 @@
             <div class="card text-center shadow p-0.5 mb-5 bg-white rounded">
                <div class="card-header font-italic">
                  By <%= @article.user.username if @article.user %>
+                 <%= link_to gravator_for(@article.user), user_path(@article.user)%>
                </div>
                  <div class="card-body">
                  
