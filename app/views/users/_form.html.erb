@@ -15,14 +15,14 @@
     <div class="form-group row">
         <%= f.label :email, class:"col-2 col-form-label text-light"%> 
         <div class="col-10">
-            <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "Choose password" %> 
+            <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "Please enter your email" %> 
         </div>
     </div>
 
     <div class="form-group row">
         <%= f.label :password, class:"col-2 col-form-label text-light"%> 
         <div class="col-10">
-            <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Please enter your email" %> 
+            <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Choose password" %> 
         </div>
     </div>
 
@@ -31,8 +31,6 @@
     </div>
 
 <%end%>
-
-
       <%= link_to 'Return to articles page', articles_path, class: "text-info" %>
 </div>
 </div>
