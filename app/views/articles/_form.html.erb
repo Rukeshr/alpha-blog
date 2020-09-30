@@ -14,19 +14,25 @@
 
     <div class="form-group row">
         <%= f.label :description, class:"col-2 col-form-label text-light"%> 
-        <div class="col-10">
+            <div class="col-10">
             <%= f.text_area :description, rows:10, class: "form-control shadow rounded", placeholder: "Description of the article" %> 
         </div>
     </div>
+
+    <div class="form-group row">
+          <%= f.label :category, class: "col-2 col-form-label text-light" %>
+          <div class="col-10"> 
+            <%= f.collection_select(:category_ids, Category.all, :id, :name,
+            { prompt: "Make your selection from the list below (can be empty)"}, { multiple: true, size: 3, class: "custom-select shadow rounded" }) %>
+          </div>
+        </div>
 
     <div class="form-group row justify-content-center">
     
     <%= f.submit class: "btn btn-outline-light btn-lg" %>    </div>
 
     <% end %>
+    <%= link_to 'Return to articles page', articles_path, class: "text-info" %>
 </div>
-
-      <%= link_to 'Return to articles page', articles_path, class: "text-info" %>
-
 </div>
 </div>
